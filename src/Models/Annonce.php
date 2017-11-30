@@ -8,35 +8,40 @@
 
 namespace Leboncoin;
 
-class Utilisateur {
+class Annonce 
+{
 
     /**
      * @var integer
      */
+    private $id_annonce;
+    
+    /**
+     * @var integer
+     */
     private $id_utilisateur;
+    
+    /**
+     * @var integer
+     */
+    private $id_categorie;
 
     /**
      * @var string
      */
-    private $email;
+    private $titre;
 
     /**
      * @var string
      */
-    private $password;
+    private $contenu;
 
     /**
      *
-     * @var string 
+     * @var float 
      */
-    private $nom;
-
-    /**
-     *
-     * @var string
-     */
-    private $prenom;
-
+    private $prix;
+    
     /**
      *
      * @var Datetime
@@ -60,29 +65,39 @@ class Utilisateur {
      * @var boolean
      */
     private $deleted;
-
+    
     /**
      * 
+     * @param int $id_annonce
      * @param int $id_utilisateur
-     * @param string $email
-     * @param string $password
-     * @param string $nom
-     * @param string $prenom
-     * @param \DateTime $date_create
-     * @param \DateTime $date_update
+     * @param int $id_categorie
+     * @param string $titre
+     * @param string $contenu
+     * @param float $prix
+     * @param \Datetime $date_create
+     * @param \Datetime $date_update
      * @param bool $active
      * @param bool $deleted
      */
-    function __construct(int $id_utilisateur, string $email, string $password, string $nom, string $prenom, DateTime $date_create, \DateTime $date_update, bool $active, bool $deleted) {
+    function __construct(int $id_annonce, int $id_utilisateur, int $id_categorie, string $titre, string $contenu, float $prix, Datetime $date_create, Datetime $date_update, bool $active, bool $deleted) {
+        $this->id_annonce = $id_annonce;
         $this->id_utilisateur = $id_utilisateur;
-        $this->email = $email;
-        $this->password = $password;
-        $this->nom = $nom;
-        $this->prenom = $prenom;
+        $this->id_categorie = $id_categorie;
+        $this->titre = $titre;
+        $this->contenu = $contenu;
+        $this->prix = $prix;
         $this->date_create = $date_create;
         $this->date_update = $date_update;
         $this->active = $active;
         $this->deleted = $deleted;
+    }
+
+    /**
+     * 
+     * @return int
+     */
+    function getId_annonce() {
+        return $this->id_annonce;
     }
 
     /**
@@ -95,49 +110,49 @@ class Utilisateur {
 
     /**
      * 
-     * @return string
+     * @return int
      */
-    function getEmail() {
-        return $this->email;
+    function getId_categorie() {
+        return $this->id_categorie;
     }
 
     /**
      * 
      * @return string
      */
-    function getPassword() {
-        return $this->password;
+    function getTitre() {
+        return $this->titre;
     }
 
     /**
      * 
      * @return string
      */
-    function getNom() {
-        return $this->nom;
+    function getContenu() {
+        return $this->contenu;
     }
 
     /**
      * 
-     * @return string
+     * @return float
      */
-    function getPrenom() {
-        return $this->prenom;
+    function getPrix() {
+        return $this->prix;
     }
 
     /**
      * 
-     * @return Datetime
+     * @return \Datetime
      */
-    function getDate_create(): DateTime {
+    function getDate_create(): Datetime {
         return $this->date_create;
     }
 
     /**
      * 
-     * @return Datetime
+     * @return \Datetime
      */
-    function getDate_update(): DateTime {
+    function getDate_update(): Datetime {
         return $this->date_update;
     }
 
@@ -159,6 +174,14 @@ class Utilisateur {
 
     /**
      * 
+     * @param int $id_annonce
+     */
+    function setId_annonce(int $id_annonce) {
+        $this->id_annonce = $id_annonce;
+    }
+
+    /**
+     * 
      * @param int $id_utilisateur
      */
     function setId_utilisateur(int $id_utilisateur) {
@@ -167,49 +190,49 @@ class Utilisateur {
 
     /**
      * 
-     * @param string $email
+     * @param int $id_categorie
      */
-    function setEmail(string $email) {
-        $this->email = $email;
+    function setId_categorie(int $id_categorie) {
+        $this->id_categorie = $id_categorie;
     }
 
     /**
      * 
-     * @param string $password
+     * @param string $titre
      */
-    function setPassword(string $password) {
-        $this->password = $password;
+    function setTitre(string $titre) {
+        $this->titre = $titre;
     }
 
     /**
      * 
-     * @param string $nom
+     * @param string $contenu
      */
-    function setNom(string $nom) {
-        $this->nom = $nom;
+    function setContenu(string $contenu) {
+        $this->contenu = $contenu;
     }
 
     /**
      * 
-     * @param string $prenom
+     * @param float $prix
      */
-    function setPrenom(string $prenom) {
-        $this->prenom = $prenom;
+    function setPrix(float $prix) {
+        $this->prix = $prix;
     }
 
     /**
      * 
-     * @param \DateTime $date_create
+     * @param \Datetime $date_create
      */
-    function setDate_create(DateTime $date_create) {
+    function setDate_create(Datetime $date_create) {
         $this->date_create = $date_create;
     }
 
     /**
      * 
-     * @param \DateTime $date_update
+     * @param \Datetime $date_update
      */
-    function setDate_update(DateTime $date_update) {
+    function setDate_update(Datetime $date_update) {
         $this->date_update = $date_update;
     }
 
@@ -228,5 +251,7 @@ class Utilisateur {
     function setDeleted(bool $deleted) {
         $this->deleted = $deleted;
     }
+
+
 
 }
