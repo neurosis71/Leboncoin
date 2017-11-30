@@ -48,51 +48,12 @@ Vous pouvez maintenant accéder à l'application via :  http://localhost:8080/
 
 
 
+Base de données
+-----------------------------
+
+Le dossier database du projet contient :
+
+- Le fichier SQL de création de la BDD
+- Un fichier PDF avec une représentation graphique de la BDD
 
 
-
-
-
-Getting started with Silex
---------------------------
-
-This distribution is meant to be the starting point for your Silex applications.
-
-A great way to start learning Silex is via the `Documentation`_, which will
-take you through all the features of Silex.
-
-What's inside?
----------------
-
-The Silex Skeleton is configured with the following service providers:
-
-* `ValidatorServiceProvider`_ - Provides a service for validating data. It is
-  most useful when used with the FormServiceProvider, but can also be used
-  standalone.
-
-* `ServiceControllerServiceProvider`_ - As your Silex application grows, you
-  may wish to begin organizing your controllers in a more formal fashion.
-  Silex can use controller classes out of the box, but with a bit of work,
-  your controllers can be created as services, giving you the full power of
-  dependency injection and lazy loading.
-
-* `TwigServiceProvider`_ - Provides integration with the Twig template engine.
-
-* `WebProfilerServiceProvider`_ - Enable the Symfony web debug toolbar and
-  the Symfony profiler in your Silex application when developing.
-
-* `MonologServiceProvider`_ - Enable logging in the development environment.
-
-Read the `Providers`_ documentation for more details about Silex Service
-Providers.
-
-Enjoy!
-
-.. _Composer: http://getcomposer.org/
-.. _Documentation: http://silex.sensiolabs.org/documentation
-.. _ValidatorServiceProvider: http://silex.sensiolabs.org/doc/master/providers/validator.html
-.. _ServiceControllerServiceProvider: http://silex.sensiolabs.org/doc/master/providers/service_controller.html
-.. _TwigServiceProvider: http://silex.sensiolabs.org/doc/master/providers/twig.html
-.. _WebProfilerServiceProvider: http://github.com/silexphp/Silex-WebProfiler
-.. _MonologServiceProvider: http://silex.sensiolabs.org/doc/master/providers/monolog.html
-.. _Providers: http://silex.sensiolabs.org/doc/providers.html
