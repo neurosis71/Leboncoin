@@ -81,7 +81,7 @@ Vagrant.configure(2) do |config|
         rm -rf /var/www
         ln -fs /vagrant /var/www
     fi
-    cp /vagrant/VagrantProvisionning/Nginx/leboncoin.conf /etc/nginx/conf.d/leboncoin.conf
+    #cp /vagrant/VagrantProvisionning/Nginx/leboncoin.conf /etc/nginx/conf.d/leboncoin.conf
 
    SHELL
 end

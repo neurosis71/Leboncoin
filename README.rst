@@ -45,6 +45,7 @@ Vous devez copier le fichier VagrantProvisionning/Nginx/leboncoin.conf sur la VM
     $ rm default.conf
     $ cp /vagrant/VagrantProvisionning/Nginx/leboncoin.conf .
     $ sudo service nginx restart
+    $ exit
 
 N'oubliez pas de lancer composer
 
