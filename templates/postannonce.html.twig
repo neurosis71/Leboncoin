@@ -1,5 +1,21 @@
 {% extends "layout.html.twig" %}
 
 {% block content %}
-    Welcome to your new Silex Application!
+    <h1>Nous venons d'envoyer un appel Curl à l'API dont voici le résultat :</h1>
+    
+    
+    <span style="font-weight: bold">HTTP STATUS : </span> {{http_status}}
+    
+    <br /><br />
+    
+    <span style="font-weight: bold">Response : </span>
+    <p>
+        {% for key, value in annonce %}
+            {{ key }}: {{ value|e }}<br />
+        {% endfor %}
+    </p>
+    
+    
+    
+     <a href="{{ path('homepage') }}">Retourner à l'acceuil</a> 
 {% endblock %}

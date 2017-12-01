@@ -1,5 +1,45 @@
 {% extends "layout.html.twig" %}
 
 {% block content %}
-    Welcome to your new Silex Application!
+
+    <style>
+        table {width: 100%; text-align: center;}
+        table, tr td {border: 1px solid black; border-collapse: collapse}
+        thead {font-weight: bold}
+    </style>
+
+    <h1>Test Technique pour LeBonCoin</h1>
+
+    <span>Veuillez clicker sur ce lien pour simuler un appel Curl : </span> <a href="{{ path('post_annonce') }}">Créer une annonce</a> 
+
+    <br /><br />
+
+    <h4>Liste des endpoints</h4>    
+    <table>
+        <thead>
+            <tr>
+                <td>Endpoint</td>
+                <td>Method</td>
+                <td>Description</td>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>/</td>
+            <td>GET</td>
+            <td>Homepage, lien afin de tester l'ajout d'une annonce et liste des endpoints</td>
+        </tr>
+        <tr>
+            <td>/postannonce</td>
+            <td>GET</td>
+            <td>Fait un appel Curl a l'API afin de créer une annonce et affiche le résultat</td>
+        </tr>
+        <tr>
+            <td>/annonces</td>
+            <td>POST</td>
+            <td>REST endpoint pour créer une annonce</td>
+        </tr>
+        </tbody>
+    </table>
+
 {% endblock %}
