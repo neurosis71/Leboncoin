@@ -5,17 +5,25 @@ Rendu de test technique pour LeBonCoin.
 
 Cette application utilise la box Vagrant rasmus/php7dev pour monter l'environnement de developpement et est basé sur Silex Skeleton.
 
-Vagrant: https://www.vagrantup.com/
-rasmus/php7dev: https://app.vagrantup.com/rasmus/boxes/php7dev
-Silex: https://silex.symfony.com/download
+`Vagrant
+<https://www.vagrantup.com/>`_.
+
+`rasmus/php7dev
+<https://app.vagrantup.com/rasmus/boxes/php7dev>`_.
+
+`Silex
+<https://silex.symfony.com/download/>`_.
 
 Mise en route de l'application
 ----------------------------
 
 Afin de monter votre environnement vous devez installer au préalable :
 
-Vagrant: https://www.vagrantup.com/
-Virtual Box: https://www.virtualbox.org/
+`Vagrant
+<https://www.vagrantup.com/>`_.
+
+`Virtual Box
+<https://www.virtualbox.org/>`_.
 
 
 Il vous suffira ensuite de faire un
