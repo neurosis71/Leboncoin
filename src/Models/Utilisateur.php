@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-namespace Leboncoin;
+namespace Models;
 
 class Utilisateur {
 
@@ -61,29 +61,7 @@ class Utilisateur {
      */
     private $deleted;
 
-    /**
-     * 
-     * @param int $id_utilisateur
-     * @param string $email
-     * @param string $password
-     * @param string $nom
-     * @param string $prenom
-     * @param \DateTime $date_create
-     * @param \DateTime $date_update
-     * @param bool $active
-     * @param bool $deleted
-     */
-    function __construct(int $id_utilisateur, string $email, string $password, string $nom, string $prenom, DateTime $date_create, \DateTime $date_update, bool $active, bool $deleted) {
-        $this->id_utilisateur = $id_utilisateur;
-        $this->email = $email;
-        $this->password = $password;
-        $this->nom = $nom;
-        $this->prenom = $prenom;
-        $this->date_create = $date_create;
-        $this->date_update = $date_update;
-        $this->active = $active;
-        $this->deleted = $deleted;
-    }
+    
 
     /**
      * 

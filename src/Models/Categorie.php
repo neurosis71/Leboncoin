@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-namespace Leboncoin;
+namespace Models;
 
 class Categorie 
 {
@@ -45,23 +45,7 @@ class Categorie
      */
     private $deleted;
 
-    /**
-     * 
-     * @param int $id_categorie
-     * @param string $nom
-     * @param \Datetime $date_create
-     * @param \Datetime $date_update
-     * @param bool $active
-     * @param bool $deleted
-     */
-    function __construct(int $id_categorie, string $nom, Datetime $date_create, Datetime $date_update, bool $active, bool $deleted) {
-        $this->id_categorie = $id_categorie;
-        $this->nom = $nom;
-        $this->date_create = $date_create;
-        $this->date_update = $date_update;
-        $this->active = $active;
-        $this->deleted = $deleted;
-    }
+
 
     /**
      * 

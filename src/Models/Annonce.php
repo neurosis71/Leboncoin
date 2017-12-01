@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-namespace Leboncoin;
+namespace Models;
 
 class Annonce 
 {
@@ -44,13 +44,13 @@ class Annonce
     
     /**
      *
-     * @var Datetime
+     * @var string
      */
     private $date_create;
 
     /**
      *
-     * @var Datetime
+     * @var string
      */
     private $date_update;
 
@@ -65,32 +65,8 @@ class Annonce
      * @var boolean
      */
     private $deleted;
+
     
-    /**
-     * 
-     * @param int $id_annonce
-     * @param int $id_utilisateur
-     * @param int $id_categorie
-     * @param string $titre
-     * @param string $contenu
-     * @param float $prix
-     * @param \Datetime $date_create
-     * @param \Datetime $date_update
-     * @param bool $active
-     * @param bool $deleted
-     */
-    function __construct(int $id_annonce, int $id_utilisateur, int $id_categorie, string $titre, string $contenu, float $prix, Datetime $date_create, Datetime $date_update, bool $active, bool $deleted) {
-        $this->id_annonce = $id_annonce;
-        $this->id_utilisateur = $id_utilisateur;
-        $this->id_categorie = $id_categorie;
-        $this->titre = $titre;
-        $this->contenu = $contenu;
-        $this->prix = $prix;
-        $this->date_create = $date_create;
-        $this->date_update = $date_update;
-        $this->active = $active;
-        $this->deleted = $deleted;
-    }
 
     /**
      * 
@@ -142,17 +118,17 @@ class Annonce
 
     /**
      * 
-     * @return \Datetime
+     * @return string
      */
-    function getDate_create(): Datetime {
+    function getDate_create() {
         return $this->date_create;
     }
 
     /**
      * 
-     * @return \Datetime
+     * @return string
      */
-    function getDate_update(): Datetime {
+    function getDate_update() {
         return $this->date_update;
     }
 
@@ -222,17 +198,17 @@ class Annonce
 
     /**
      * 
-     * @param \Datetime $date_create
+     * @param string $date_create
      */
-    function setDate_create(Datetime $date_create) {
+    function setDate_create(string $date_create) {
         $this->date_create = $date_create;
     }
 
     /**
      * 
-     * @param \Datetime $date_update
+     * @param string $date_update
      */
-    function setDate_update(Datetime $date_update) {
+    function setDate_update(string $date_update) {
         $this->date_update = $date_update;
     }
 
@@ -253,5 +229,22 @@ class Annonce
     }
 
 
+    
+    function toArray(){
+        
+        return $result = array(
+            "id_annonce" => $this->getId_annonce(),
+            "id_utilisateur" => $this->getId_utilisateur(),
+            "id_categorie" => $this->getId_categorie(),
+            "titre" => $this->getTitre(),
+            "contenu" => $this->getContenu(),
+            "prix" => $this->getPrix(),
+            "date_create" => $this->getDate_create(),
+            "date_update" => $this->getDate_update(),
+            "active" => $this->getActive(),
+            "deleted" => $this->getDeleted()
+        );
+        
+    }
 
 }
